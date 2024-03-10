@@ -1156,6 +1156,12 @@ with gr.Blocks() as demo:
         temperature = gr.Slider(0.01, 1, value=0.6, step=0.01, label="Temperature", interactive=True)
 
     with gr.Row():
+        gr.HTML(
+            """<h2 align="center"> <font size="+0"> 例子（这里面涉及推荐选择的需要从左面或上面的角色图片集里面点按选取） </font> </h2>""",
+            elem_id="title",
+    )
+    
+    with gr.Row():
         gr.Examples(
             [
             ["这里推荐从左面选择：五郎",  "介绍"],
