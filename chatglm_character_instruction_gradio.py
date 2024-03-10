@@ -7,6 +7,7 @@ import json
 import re
 from functools import partial
 
+from rapidfuzz import fuzz
 import imagehash
 from datasets import load_dataset
 from PIL import Image
@@ -14,19 +15,26 @@ from PIL import Image
 character_img_ds = load_dataset("svjack/genshin-impact-character-image")
 character_img_dict = dict(pd.Series(character_img_ds["train"]).map(lambda x: (x["name"], x["img"])).values.tolist())
 
-partial_order_list = ['钟离',
+partial_order_list = [
+ '那维莱特',
+ "芙宁娜",
+ '魈',
+
+ "可莉",
+ "提纳里",
+ "行秋", "柯莱", "凝光", "北斗", "五郎",
+
+ '钟离',
  '纳西妲',
  '刻晴',
- '那维莱特',
- '魈',
  '优菈',
  '八重神子',
- '可莉',
+ #'可莉',
  '夜兰',
  '妮露',
  '娜维娅',
  '宵宫',
- '提纳里',
+ #'提纳里',
  '林尼',
  '枫原万叶',
  '流浪者',
@@ -40,7 +48,7 @@ partial_order_list = ['钟离',
  '神里绫华',
  '胡桃',
  '艾尔海森',
- '芙宁娜',
+ #'芙宁娜',
  '荒泷一斗',
  '莫娜',
  '莱欧斯利',
@@ -960,9 +968,19 @@ def run_single(
         ):
             pass
         #yield ele
-        req.append(ele)
+        if len(ele.strip()) >= 3:
+            req.append(ele)
     #print(req)
-    req = sorted(set(filter(lambda x: x.strip(), req)), key = lambda y: -1 * len(y))
+    #req = sorted(set(filter(lambda x: x.strip(), req)), key = lambda y: -1 * len(y))
+    if hasattr(Text, "value"):
+        Text_ = Text.value
+    else:
+        Text_ = Text
+    if Text_.strip():
+        req = sorted(set(filter(lambda x: x.strip(), req)), key = lambda y: -1 * fuzz.ratio(y, Text_))
+    else:
+        req = sorted(set(filter(lambda x: x.strip(), req)), key = lambda y: -1 * len(y))
+
     req = "\n\n".join(map(lambda t2: "结果{}:\n{}".format(t2[0], t2[1]), enumerate(req)))
     req = process_text(req)
     return req
@@ -1113,7 +1131,7 @@ with gr.Blocks() as demo:
             two_output = gr.Text(label = "角色间看法结果", info = "可编辑", lines = 2, scale = 5.0)
 
     with gr.Row():
-        gen_times = gr.Slider(1, 10, value=1, step=1.0, label="Generate Num", interactive=True)
+        gen_times = gr.Slider(1, 10, value=3, step=1.0, label="Generate Num", interactive=True)
         max_length = gr.Slider(0, 32768, value=512, step=1.0, label="Maximum length", interactive=True)
         top_p = gr.Slider(0, 1, value=0.8, step=0.01, label="Top P", interactive=True)
         temperature = gr.Slider(0.01, 1, value=0.6, step=0.01, label="Temperature", interactive=True)
@@ -1121,14 +1139,23 @@ with gr.Blocks() as demo:
     with gr.Row():
         gr.Examples(
             [
-            ["故事", "一天行秋在绝云间练剑。"],
-            ["信", "鸟语花香"],
-            ["聊天", "美味的杏仁豆腐"],
-            ["时候", "品尝璃月香茗"],
-            ["关于", "如何制造蹦蹦炸弹"],
-            ["了解", ""],
+            ["这里推荐从左面选择：行秋",  "介绍"],
             ],
-            inputs = [select_task, Text],
+            inputs = [single_name, select_task],
+            label = "单个角色任务指令例子"
+        )
+
+    with gr.Row():
+        gr.Examples(
+            [
+            ["这里推荐从左面选择：行秋" ,"故事", "一天行秋在绝云间练剑。"],
+            ["这里推荐从左面选择：柯莱" ,"信", "鸟语花香"],
+            ["这里推荐从左面选择：魈" ,"聊天", "美味的杏仁豆腐"],
+            ["这里推荐从左面选择：凝光" ,"时候", "品尝璃月香茗"],
+            ["这里推荐从左面选择：可莉" ,"关于", "如何制造蹦蹦炸弹"],
+            ["这里推荐从左面选择：北斗" ,"了解", ""],
+            ],
+            inputs = [single_name ,select_task, Text],
             label = "单个角色任务指令例子"
         )
 
@@ -1162,7 +1189,16 @@ with gr.Blocks() as demo:
     with gr.Row():
         gr.Examples(
             [
-            ["大慈树王",
+                ["这里推荐从上面选择：芙宁娜", "这里推荐从上面选择：那维莱特"]
+            ],
+            inputs = [single_name_1, single_name_2],
+            label = "两个角色看法指令例子"
+        )
+
+    with gr.Row():
+        gr.Examples(
+            [
+            ["这里推荐从上面选择：提纳里" ,"大慈树王",
             "成年女性", "须弥", "须弥的统治者",
             "爱民如子，带领雨林的人民战胜灾厄",
                         '''
@@ -1171,7 +1207,7 @@ with gr.Blocks() as demo:
                         '''
             ],
             ],
-            inputs = [single_name_2,
+            inputs = [single_name_1 ,single_name_2,
             select_gender_2, select_country_2, single_identity_2,
             single_disposition_2, single_introduction_2
             ],
