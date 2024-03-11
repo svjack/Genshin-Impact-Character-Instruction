@@ -865,7 +865,7 @@ model_file_path = "genshin_impact_character_llamazh13b_ggml/llama2zh-13b-3900-q4
 from llama_cpp import Llama
 llama = Llama(model_file_path,
                   n_ctx = 4090,
-                  n_threads=2,            # The number of CPU threads to use, tailor to your system and the resulting performance
+                  n_threads=8,            # The number of CPU threads to use, tailor to your system and the resulting performance
                   n_gpu_layers=-1
                   )
 print("load {}".format(model_file_path))
