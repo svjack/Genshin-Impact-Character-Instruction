@@ -32,19 +32,18 @@ This project is an attempt to give Instruction Model demo for characters above.
 ## Installation and Running Results
 ### Install and Running Step
 In the concept, the project can be divided into two parts, Basic_Part and LLM_Part. <br/>
-* <b>Basic_Part</b> contains modules: [LangChain](https://github.com/langchain-ai/langchain) [SetFit](https://github.com/huggingface/setfit) you should install all of them By <br/>
+* <b>Basic_Part</b> contains modules for text processing and display, you should install all of them By <br/>
 ```bash
 pip install -r basic_requirements.txt
 ```
-* <b>LLM_Part</b> are modules that you should choose one to install: [HayStack](https://github.com/deepset-ai/haystack) [chatglm.cpp](https://github.com/li-plus/chatglm.cpp) [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) [ollama](https://github.com/ollama/ollama)<br/> <br/>
+* <b>LLM_Part</b> are modules that you should choose one to install: [chatglm.cpp](https://github.com/li-plus/chatglm.cpp) [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) <br/> <br/>
 
 Below are different LLM Repo types with their install and running command
 |LLM Repo Name | LLM Model Name | Install Command in Linux | Run Gradio Demo Command |
 |---------|--------|--------|--------|
-| HayStack | Mistral-7B (based on huggingface inference) | pip install -r basic_requirements.txt && pip install haystack-ai==2.0.0b5 | python haystack_bookqa_gradio.py |
-| llama-cpp-python | Mistral-7B (based on llama-cpp) | pip install -r basic_requirements.txt && pip install llama-cpp-python==0.2.55 | python mistral_bookqa_gradio.py |
-| chatglm.cpp | chatglm3-6b | pip install -r basic_requirements.txt && pip install chatglm-cpp==0.3.1 | python chatglm_bookqa_gradio.py |
-| ollama | Qwen-7B | pip install -r basic_requirements.txt && wget https://ollama.com/install.sh && sh ./install.sh && pip install ollama==0.1.6 && sudo systemctl start ollama | python ollama_qwen7b_bookqa_gradio.py |
+| chatglm.cpp | THUDM/chatglm3-6b-base | pip install -r basic_requirements.txt && pip install chatglm-cpp==0.3.1 | python chatglm_character_instruction_gradio.py |
+| llama-cpp-python | hfl/chinese-llama-2-13b | pip install -r basic_requirements.txt && pip install llama-cpp-python==0.2.55 | python llama2zh_character_instruction_gradio.py |
+
 
 ### Running Results
 
