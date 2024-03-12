@@ -126,7 +126,7 @@ From above conclusion, ChatGLM-6B-base-lora-tuned makes it easier to generate mu
 
 When try yourself, when the outputs not too good, you can try to edit any changable part in the gradio ui, It's worth mentioning that shortening character introductions is generally useful, but it will hurt the variety of output. <br/>
 
-I recommand you run the demo on GPU (10GB gpu memory is enough, all examples have been tested on GTX 1080Ti and GTX 3060) <br/><br/>
+I recommand you run the demo on GPU (12GB gpu memory is enough, all examples have been tested on GTX 1080Ti and GTX 3060) <br/><br/>
 
 ## Models
 | Type | Base Model | HuggingFace Lora checkpoints link | Huggingface merged ggml or gguf link |
