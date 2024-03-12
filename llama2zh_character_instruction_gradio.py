@@ -1150,7 +1150,7 @@ with gr.Blocks() as demo:
             two_output = gr.Text(label = "角色间看法结果", info = "可编辑", lines = 2, scale = 5.0)
 
     with gr.Row():
-        gen_times = gr.Slider(1, 10, value=3, step=1.0, label="Generate Num", interactive=True)
+        gen_times = gr.Slider(1, 10, value=10, step=1.0, label="Generate Num", interactive=True)
         max_length = gr.Slider(0, 32768, value=512, step=1.0, label="Maximum length", interactive=True)
         top_p = gr.Slider(0, 1, value=0.8, step=0.01, label="Top P", interactive=True)
         temperature = gr.Slider(0.01, 1, value=0.6, step=0.01, label="Temperature", interactive=True)
