@@ -17,7 +17,7 @@
 [Genshin Impact](https://genshin.hoyoverse.com/en/) is an action role-playing game developed by miHoYo, published by miHoYo in mainland China and worldwide by Cognosphere, 
 HoYoverse. The game features an anime-style open-world environment and an action-based battle system using elemental magic and character-switching. 
 
-In the Game, one can play many Characters to explore the amazing open-world environment. Some characters ca be seen in below gallery.
+In the Game, one can play many Characters to explore the amazing open-world environment. Some characters can be seen in below gallery.
 
 <br/>
 
