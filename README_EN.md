@@ -128,7 +128,7 @@ I recommand you run the demo on GPU (10GB gpu memory is enough, all examples hav
 
 ## Models
 | Type | Base Model | HuggingFace Lora checkpoints link | Huggingface merged ggml or gguf link |
-|---------|--------|--------|
+|---------|--------|--------|--------|
 | ChatGLM-6B-base-lora-tuned | THUDM/chatglm3-6b-base | https://huggingface.co/svjack/genshin_impact_character_glm6b_base_lora | https://huggingface.co/svjack/genshin_impact_character_glm6b_base_ggml |
 | chinese-llama-2-13b-lora-tuned | hfl/chinese-llama-2-13b | https://huggingface.co/svjack/genshin_impact_character_llamazh13b_lora | https://huggingface.co/svjack/genshin_impact_character_llamazh13b_ggml |
 
