@@ -53,6 +53,10 @@ https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/0
 
 
 
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/a248b68e-caff-4f4e-8a5b-12e09579a9f3
+
+
+
 
 
 
