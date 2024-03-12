@@ -1085,7 +1085,7 @@ with gr.Blocks() as demo:
             single_prompt_run_button = gr.Button("得到任务结果")
             output = gr.Text(label = "任务生成结果", info = "可编辑", lines = 2, scale = 5.0)
 
-    with gr.Tab("两个角色看法指令"):
+    with gr.Tab("两个角色看法指令", visible=False):
         with gr.Row():
             with gr.Column(0.5):
                 with gr.Column():
