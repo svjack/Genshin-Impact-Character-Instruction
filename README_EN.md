@@ -132,3 +132,38 @@ I recommand you run the demo on GPU (10GB gpu memory is enough, all examples hav
 | ChatGLM-6B-base-lora-tuned | THUDM/chatglm3-6b-base | https://huggingface.co/svjack/genshin_impact_character_glm6b_base_lora | https://huggingface.co/svjack/genshin_impact_character_glm6b_base_ggml |
 | chinese-llama-2-13b-lora-tuned | hfl/chinese-llama-2-13b | https://huggingface.co/svjack/genshin_impact_character_llamazh13b_lora | https://huggingface.co/svjack/genshin_impact_character_llamazh13b_ggml |
 
+### Note
+Each Huggingface merged ggml or gguf repos above contains two merged 4bit quantization models, they are the models used in this project and trained myself.<br/>
+If you want to try conclusion in other checkpoint steps, you can use file in HuggingFace Lora checkpoints links and merge it by yourself, 
+You can take a look at [chatglm.cpp](https://github.com/li-plus/chatglm.cpp) and [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) to understand how to merge them.
+
+<br/>
+
+## Futher Reading
+I also release a project about A Genshin Impact Book Question Answer Project supported by LLM (build by LangChain Haystack ChatGLM Mistral OLlama), an attempt to build Chinese Q&A on the different LLM support RAG system. <br/>
+If you are interested in it, take a look at [svjack/Genshin-Impact-BookQA-LLM](https://github.com/svjack/Genshin-Impact-BookQA-LLM) 😊
+
+<!-- CONTACT -->
+## Contact
+
+<!--
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+-->
+svjack - https://huggingface.co/svjack - svjackbt@gmail.com - ehangzhou@outlook.com
+
+<!--
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+-->
+Project Link:[https://github.com/svjack/Genshin-Impact-Character-Instruction](https://github.com/svjack/Genshin-Impact-Character-Instruction)
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Genshin Impact](https://genshin.hoyoverse.com/en/)
+* [Huggingface](https://huggingface.co)
+* [chatglm.cpp](https://github.com/li-plus/chatglm.cpp)
+* [llama-cpp-python](https://github.com/abetlen/llama-cpp-python)
+* [svjack/Genshin-Impact-BookQA-LLM](https://github.com/svjack/Genshin-Impact-BookQA-LLM)
+* [svjack](https://huggingface.co/svjack)
+
+
