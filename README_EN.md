@@ -65,7 +65,7 @@ This relatively flexible prompt word setting gives more variability and controll
 
 <br/>
 
-Following are results of some tasks in different models. (take the favor one from 3 generations)
+Following are results of some tasks in different models. (take the favor one from 3 generations) The second column of Characters and Tasks is the task type (from 7 types), the third column is the additional information of task.
 
 |    | Characters and Tasks                                                           | ChatGLM-6B-base-lora-tuned                                                                                                                                           | chinese-llama-2-13b-lora-tuned                                                                                                                                               |
 |---:|:---------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -123,6 +123,8 @@ Following are results of some tasks in different models. (take the favor one fro
 
 ### Note
 From above conclusion, ChatGLM-6B-base-lora-tuned makes it easier to generate multi-line and dialogue conclusions, chinese-llama-2-13b-lora-tuned Easily generates single-line high-quality results. <br/>
+
+When try yourself, when the outputs not too good, you can try to edit any changable part in the gradio ui, It's worth mentioning that shortening character introductions is generally useful, but it will hurt the variety of output. <br/>
 
 I recommand you run the demo on GPU (10GB gpu memory is enough, all examples have been tested on GTX 1080Ti and GTX 3060) <br/><br/>
 
