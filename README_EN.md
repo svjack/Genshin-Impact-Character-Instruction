@@ -19,7 +19,13 @@ HoYoverse. The game features an anime-style open-world environment and an action
 
 In the Game, one can play many Characters to explore the amazing open-world environment. Some characters ca be seen in below gallery.
 
-<img src="imgs/character_shot.png" alt="Girl in a jacket" width="1050" height="950">
+<br/>
+
+<div align="center">
+<img src="imgs/characters_shot.png" alt="Girl in a jacket" width="550" height="6950"> 
+</div>
+
+<br/>
 
 This project is an attempt to give Instruction Model demo for characters above.
 
