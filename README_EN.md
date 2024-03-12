@@ -58,11 +58,14 @@ There are 7 different tasks include "介绍", "故事", "信", "聊天", "时候
 can provide one character's perspective on another character's perspective. (chinese-llama-2-13b-lora-tuned not 
 cover this part of the ability) <br/>
 
+The gradio interface is the prompt editor for llm, Each editable input box (have "可编辑" fonts, ex: 角色姓名 身份 性格特征 角色介绍 任务追加信息) are free to change or edit,
+each optional input box (have "可选择" fonts, ex: 性别 国籍 选择任务) are free to change or select. They describe the background of characters and the info of instruction tasks. <br/>
 
+This relatively flexible prompt word setting gives more variability and controllability to characters and tasks, and makes it possible to create new characters. Belowing the new character "大慈树王" is the example for new character. And you can ask the model for open-ended content that is not included in the game itself. 
 
 <br/>
 
-Following are results of some tasks in different models.
+Following are results of some tasks in different models. (take the favor one from 3 generations)
 
 |    | Characters and Tasks                                                           | ChatGLM-6B-base-lora-tuned                                                                                                                                           | chinese-llama-2-13b-lora-tuned                                                                                                                                               |
 |---:|:---------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -114,10 +117,12 @@ Following are results of some tasks in different models.
 |  8 | 大慈树王 故事 大慈树王到须弥沙漠上播种，并跟沙漠的统治者赤王交朋友。 | 大慈树王和赤王一起，创造出了须弥。大慈树王用智慧的力量，创造了雨林和须弥的生物，并且为它们创造了生命。赤王则是创造了沙漠。                                           | 在沙漠里，大慈树王遇到了赤王，赤王用自己特有的方式，表达了对大慈树王的敬意：「我的身体，是沙漠之神赐予我的，但你那颗强大的心，却是造物之神送给你的，所以，我敬你，我敬你！」 |
 |    |                                                                      | 大慈树王和赤王是好朋友。赤王曾经想要毁灭世界，大慈树王为了拯救世界，用生命换取了世界树的永恒。                                                                       |                                                                                                                                                                              |
 |  9 | 大慈树王 关于 教令院                                                 | 雨林的学者们，在过去的岁月里，为了理解我、理解世界，付出了难以想象的艰辛。他们一直守着雨林，守着知识，守着这个世界的智慧。                                           | 教令院是维持须弥秩序和知识传承的重要力量，我非常信任他们，相信他们会将我留在心中的位置，与我一同守护须弥，直到我再次醒来的那一天。                                           |
-| 10 | 芙宁娜 那维莱特                                                      | 「那维莱特先生，是一位非常出色的审判官。他有着丰富的经验，睿智的头脑，还有公正的眼光。他是我见过最出色的审判官。」                                                   | ''                                                                                                                                                                           |
-| 11 | 提纳里 大慈树王                                                      | 「大慈树王」？我听雨林里的居民说过她，他们都说，她很关心我们，很慈爱我们。但是，她已经很久没有露面了。雨林里现在还是有些不安定，我希望她能早日回来，让雨林恢复安宁。 | ''                                                                                                                                                                           |
+| 10 | 芙宁娜 那维莱特  角色间看法                                                    | 「那维莱特先生，是一位非常出色的审判官。他有着丰富的经验，睿智的头脑，还有公正的眼光。他是我见过最出色的审判官。」                                                   | ''                                                                                                                                                                           |
+| 11 | 提纳里 大慈树王  角色间看法                                                | 「大慈树王」？我听雨林里的居民说过她，他们都说，她很关心我们，很慈爱我们。但是，她已经很久没有露面了。雨林里现在还是有些不安定，我希望她能早日回来，让雨林恢复安宁。 | ''                                                                                                                                                                           |
 
 
 ### Note
+From above conclusion, ChatGLM-6B-base-lora-tuned makes it easier to generate multi-line and dialogue conclusions, chinese-llama-2-13b-lora-tuned Easily generates single-line high-quality results. <br/>
+
 I recommand you run the demo on GPU (10GB gpu memory is enough, all examples have been tested on GTX 1080Ti and GTX 3060) <br/><br/>
 
