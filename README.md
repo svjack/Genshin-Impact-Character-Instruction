@@ -119,7 +119,7 @@ Gradio示例接口可以看作与LLM交互的提示编辑器。每个可编辑�
 ### 注意
 从上方结论中看出，ChatGLM-6B-base-lora-tuned更易于生成多行对话结论，chinese-llama-2-13b-lora-tuned则更易于生成单行高质量结果。 <br/>
 当您自己尝试时，如果输出不太好，您可以尝试修改Gradio UI中可编辑的任何部分，值得注意的是缩短角色介绍通常会有利但会损害输出的多样性。 <br/>
-我推荐您在GPU上运行demo（10GB GPU内存足够，所有示例已经在GTX 1080Ti和GTX 3060上测试过） <br/><br/>
+我推荐您在GPU上运行demo（12GB GPU显存足够，所有示例已经在GTX 1080Ti和GTX 3060上测试过） <br/><br/>
 
 ## 模型
 | 类型 | 基础模型             | HuggingFace Lora checkpoint 链接              | HuggingFace合并ggml或gguf链接            |
