@@ -49,20 +49,13 @@ Below are different LLM Repo types with their install and running command
 
 
 
-https://github.com/svjack/Genshin-Impact-BookQA-LLM/assets/27874014/dd90d1ee-669a-4a12-ab4e-86069064e0a4
-
-
-
-https://github.com/svjack/Genshin-Impact-BookQA-LLM/assets/27874014/3c915195-952e-4289-bc88-1e44855c5582
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/03c45109-9b86-41a9-9dac-79cdd3cc0c96
 
 
 
 
-https://github.com/svjack/Genshin-Impact-BookQA-LLM/assets/27874014/99f2ff32-f89e-46c2-8e8e-27a6cda85809
 
 
-
-https://github.com/svjack/Genshin-Impact-BookQA-LLM/assets/27874014/b83c2764-fb49-4574-8ac9-be28ff1cf1f1
 
 
 
