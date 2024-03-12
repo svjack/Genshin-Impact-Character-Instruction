@@ -116,7 +116,50 @@ Gradio示例接口可以看作与LLM交互的提示编辑器。每个可编辑�
 | 10 | 芙宁娜 那维莱特  角色间看法                                                    | 「那维莱特先生，是一位非常出色的审判官。他有着丰富的经验，睿智的头脑，还有公正的眼光。他是我见过最出色的审判官。」                                                   | ''                                                                                                                                                                           |
 | 11 | 提纳里 大慈树王  角色间看法                                                | 「大慈树王」？我听雨林里的居民说过她，他们都说，她很关心我们，很慈爱我们。但是，她已经很久没有露面了。雨林里现在还是有些不安定，我希望她能早日回来，让雨林恢复安宁。 | ''                                                                                                                                                                           |
 
+### 注意
+从上方结论中看出，ChatGLM-6B-base-lora-tuned更易于生成多行对话结论，chinese-llama-2-13b-lora-tuned则更易于生成单行高质量结果。 <br/>
+当您自己尝试时，如果输出不太好，您可以尝试修改Gradio UI中可编辑的任何部分，值得注意的是缩短角色介绍通常会有利但会损害输出的多样性。 <br/>
+我推荐您在GPU上运行demo（10GB GPU内存足够，所有示例已经在GTX 1080Ti和GTX 3060上测试过） <br/><br/>
+
+## 模型
+| 类型 | 基础模型             | HuggingFace Lora checkpoint 链接              | HuggingFace合并ggml或gguf链接            |
+|-------|---------------------|------------------------------------------|------------------------------------------|
+| ChatGLM-6B-base-lora-tuned | THUDM/chatglm3-6b-base | https://huggingface.co/svjack/genshin_impact_character_glm6b_base_lora | https://huggingface.co/svjack/genshin_impact_character_glm6b_base_ggml |
+| chinese-llama-2-13b-lora-tuned | hfl/chinese-llama-2-13b | https://huggingface.co/svjack/genshin_impact_character_llamazh13b_lora | https://huggingface.co/svjack/genshin_impact_character_llamazh13b_ggml |
+
+### 注意
+每个上方HuggingFace合并ggml或gguf仓库中都包含两个合并的4bit量化模型，它们是本项目所使用的模型，由我在7000条标注数据集上训练。 <br/>
+如果您想尝试在其他lora checkpoint中的结果，您可以使用HuggingFace Lora checkpoint链接中的文件，并自行合并， <br/>您可以参考[chatglm.cpp](https://github.com/li-plus/chatglm.cpp)和[llama-cpp-python](https://github.com/abetlen/llama-cpp-python)了解如何合并它们。
+
+<br/>
+
+## 进一步阅读
+我还发布了一项关于基于量化大模型的原神书目问答工程 (由 LangChain Haystack ChatGLM Mistral OLlama 构造)。 <br/>
+如果您对它感兴趣，请查看[svjack/Genshin-Impact-BookQA-LLM](https://github.com/svjack/Genshin-Impact-BookQA-LLM) 😊
 
 
+<br/>
 
+<!-- CONTACT -->
+## Contact
+
+<!--
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+-->
+svjack - https://huggingface.co/svjack - svjackbt@gmail.com - ehangzhou@outlook.com
+
+<!--
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+-->
+Project Link:[https://github.com/svjack/Genshin-Impact-Character-Instruction](https://github.com/svjack/Genshin-Impact-Character-Instruction)
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Genshin Impact](https://genshin.hoyoverse.com/en/)
+* [Huggingface](https://huggingface.co)
+* [chatglm.cpp](https://github.com/li-plus/chatglm.cpp)
+* [llama-cpp-python](https://github.com/abetlen/llama-cpp-python)
+* [svjack/Genshin-Impact-BookQA-LLM](https://github.com/svjack/Genshin-Impact-BookQA-LLM)
+* [svjack](https://huggingface.co/svjack)
 
