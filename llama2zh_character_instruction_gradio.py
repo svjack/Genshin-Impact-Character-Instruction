@@ -1084,7 +1084,8 @@ with gr.Blocks() as demo:
         with gr.Row():
             single_prompt_run_button = gr.Button("得到任务结果")
             output = gr.Text(label = "任务生成结果", info = "可编辑", lines = 2, scale = 5.0)
-
+    
+    '''
     with gr.Tab("两个角色看法指令", visible=False):
         with gr.Row():
             with gr.Column(0.5):
@@ -1148,6 +1149,7 @@ with gr.Blocks() as demo:
         with gr.Row():
             two_prompt_run_button = gr.Button("得到角色间看法")
             two_output = gr.Text(label = "角色间看法结果", info = "可编辑", lines = 2, scale = 5.0)
+    '''
 
     with gr.Row():
         gen_times = gr.Slider(1, 10, value=10, step=1.0, label="Generate Num", interactive=True)
@@ -1209,43 +1211,7 @@ with gr.Blocks() as demo:
             ],
             label = "单个角色任务指令例子"
         )
-
-    with gr.Row():
-        gr.Examples(
-            [
-                ["这里推荐从上面选择：芙宁娜", "这里推荐从上面选择：那维莱特"]
-            ],
-            inputs = [single_name_1, single_name_2],
-            label = "两个角色看法指令例子"
-        )
-
-    with gr.Row():
-        gr.Examples(
-            [
-            ["这里推荐从上面选择：提纳里" ,"大慈树王",
-            "成年女性", "须弥", "须弥的统治者",
-            "爱民如子，带领雨林的人民战胜灾厄",
-                        '''
-                        草神之所以也被称之为“智慧之神”，正是因为她的意识连接着世界之树。在须弥人眼里，她是智慧的化身、仁慈与无所不能的象征，但她却在几百年前的灾难中消失了。
-            在漫长的历史当中，须弥历经浩劫，种种险情都被大慈树王一一化解。大慈树王创造出雨林，使得须弥人能获得安宁的生活。而须弥最初的教令院，便是由长久地去追随大慈树王的学者组成，他们各司其职，协助大慈树王管理须弥。最能理解大慈树王的力量和哲思的，只能是教令院了。
-                        '''
-            ],
-            ],
-            inputs = [single_name_1 ,single_name_2,
-            select_gender_2, select_country_2, single_identity_2,
-            single_disposition_2, single_introduction_2
-            ],
-            label = "两个角色看法指令例子"
-        )
-
-    select_name_1.select(
-        get_single_name, select_name_1, single_name_1
-    )
-
-    select_name_2.select(
-        get_single_name, select_name_2, single_name_2
-    )
-
+    
     select_name.select(change_single_name,
         inputs = select_name,
         outputs = [
@@ -1254,31 +1220,12 @@ with gr.Blocks() as demo:
                 ],
         )
 
-    select_name_1.select(
-        change_single_name, select_name_1,
-            [single_name_1, select_gender_1, select_country_1,
-            single_identity_1, single_disposition_1, single_introduction_1
-            ]
-    )
-
-    select_name_2.select(
-        change_single_name, select_name_2,
-            [single_name_2, select_gender_2, select_country_2,
-            single_identity_2, single_disposition_2, single_introduction_2
-            ]
-    )
-
     single_prompt_run_button.click(run_single, [
         single_name, select_gender, select_country, single_identity, single_disposition,
         select_task, Text, single_introduction,
     gen_times, max_length, top_p, temperature
     ], output)
-    two_prompt_run_button.click(run_two, [
-    single_name_1, select_gender_1, select_country_1, single_identity_1, single_disposition_1,
-    single_introduction_1,
-    single_name_2, select_gender_2, select_country_2, single_identity_2, single_disposition_2,
-    single_introduction_2,
-    gen_times, max_length, top_p, temperature], two_output)
+
 
 #demo.launch("0.0.0.0", show_api=False, share = True)
 demo.queue(max_size=4, concurrency_count=1).launch(debug=True, show_api=False, share = True)
