@@ -46,22 +46,17 @@ Below are different LLM Repo types with their install and running command
 
 
 ### Running Results
-As video example, you can click below example candidates and select character from the image gallery in gradio demo.
-
-
 
 https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/966364b2-bc35-4784-9125-dfdc7d950d7b
 
-
-
-
 https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/a248b68e-caff-4f4e-8a5b-12e09579a9f3
 
+<br/>
 
-
-
-
-
+As video example, you can click below example candidates and select character from the image gallery in gradio demo.
+There are 7 different tasks include "介绍", "故事", "信", "聊天", "时候", "关于", "了解" this project can do for single character, and for two characters ChatGLM3-6B-base-lora-tuned 
+can provide one character's perspective on another character's perspective. (chinese-llama-2-13b-lora-tuned not 
+cover this part of the ability) <br/>
 
 
 
