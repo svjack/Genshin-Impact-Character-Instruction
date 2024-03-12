@@ -49,7 +49,9 @@ Below are different LLM Repo types with their install and running command
 
 
 
-https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/03c45109-9b86-41a9-9dac-79cdd3cc0c96
+
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/966364b2-bc35-4784-9125-dfdc7d950d7b
+
 
 
 
