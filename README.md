@@ -39,7 +39,7 @@ pip install -r basic_requirements.txt
 * <b>LLM\_Part</b>是你需要选择安装的模块：[chatglm.cpp](https://github.com/li-plus/chatglm.cpp) [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) <br/> <br/>
 
 下表列出了不同类型的LLM Repo名称、LLM模型名称 及其 Linux安装命令 和 Gradio 示例运行命令
-|LLM Repo Name   | LLM Model Name       | Linux安装命令          | Gradio Demo运行命令        |
+|LLM Repo Name   | LLM Model Name       | Linux安装命令          | Gradio Demo运行命令 (访问127.0.0.1:7860)        |
 |---------------|----------------------|-----------------------|---------------------------|
 | chatglm.cpp    | THUDM/chatglm3-6b-base | pip install -r basic_requirements.txt && pip install chatglm-cpp==0.3.1 | python chatglm_character_instruction_gradio.py |
 | llama-cpp-python | hfl/chinese-llama-2-13b | pip install -r basic_requirements.txt && pip install llama-cpp-python==0.2.55 | python llama2zh_character_instruction_gradio.py |
