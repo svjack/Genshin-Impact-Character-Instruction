@@ -158,6 +158,8 @@ Project Link:[https://github.com/svjack/Genshin-Impact-Character-Instruction](ht
 ## Acknowledgements
 * [Genshin Impact](https://genshin.hoyoverse.com/en/)
 * [Huggingface](https://huggingface.co)
+* [THUDM/chatglm3-6b-base](https://huggingface.co/THUDM/chatglm3-6b-base)
+* [hfl/chinese-llama-2-13b](https://huggingface.co/hfl/chinese-llama-2-13b)
 * [chatglm.cpp](https://github.com/li-plus/chatglm.cpp)
 * [llama-cpp-python](https://github.com/abetlen/llama-cpp-python)
 * [svjack/Genshin-Impact-BookQA-LLM](https://github.com/svjack/Genshin-Impact-BookQA-LLM)
