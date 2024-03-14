@@ -126,8 +126,8 @@ From above conclusion, ChatGLM-6B-base-lora-tuned makes it easier to generate mu
 
 When try yourself, when the outputs not too good, you can try to edit any changable part in the gradio ui, It's worth mentioning that shortening character introductions is generally useful, but it will hurt the variety of output. <br/>
 
-I recommand you run the demo on GPU (12GB gpu memory is enough, all examples have been tested on GTX 1080Ti and GTX 3060) <br/>
-If you choose 2bit models in chinese-llama-2-13b-lora-tuned, then 10GB gpu memory is enough.
+* I recommand you run the demo on GPU (12GB gpu memory is enough, all examples have been tested on GTX 1080Ti and GTX 3060) <br/>
+* If you choose 2bit models in chinese-llama-2-13b-lora-tuned, then 10GB gpu memory is enough. (change variable model_file_path in [llama2zh_character_instruction_gradio.py](llama2zh_character_instruction_gradio.py) to set model file)
 <br/>
 
 ## Models
