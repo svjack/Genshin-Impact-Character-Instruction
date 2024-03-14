@@ -826,7 +826,10 @@ def get_two_prompt(
         )
     #a = a.replace("?", "").replace("？", "")
     a = a.replace("？", "?")
-    return "\n".join([b, a])
+    req = "\n".join([b, a])
+    req = process_info(req)
+    return req
+    #return "\n".join([b, a])
 
 import chatglm_cpp
 from pathlib import Path
