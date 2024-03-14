@@ -993,6 +993,7 @@ def run_single(
 
     req = "\n\n".join(map(lambda t2: "结果{}:\n{}".format(t2[0], t2[1]), enumerate(req)))
     req = process_text(req)
+    req = process_info(req)
     return req
 
 def run_two(
@@ -1021,6 +1022,7 @@ def run_two(
     req = sorted(set(filter(lambda x: x.strip(), req)), key = lambda y: -1 * len(y))
     req = "\n\n".join(map(lambda t2: "结果{}:\n{}".format(t2[0], t2[1]), enumerate(req)))
     req = process_text(req)
+    req = process_info(req)
     return req
 
 all_single_task = ["介绍", "故事", "信", "聊天", "时候", "关于", "了解"]
