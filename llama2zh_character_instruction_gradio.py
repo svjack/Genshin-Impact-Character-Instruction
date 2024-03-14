@@ -1008,7 +1008,7 @@ def run_single(
 
     req = "\n\n".join(map(lambda t2: "结果{}:\n{}".format(t2[0], t2[1]), enumerate(req)))
     req = process_text(req)
-    req = process_info(req)
+    #req = process_info(req)
     return req
 
 def run_two(
@@ -1043,7 +1043,7 @@ def run_two(
     req = req_
     req = "\n\n".join(map(lambda t2: "结果{}:\n{}".format(t2[0], t2[1]), enumerate(req)))
     req = process_text(req)
-    req = process_info(req)
+    #req = process_info(req)
     return req
 
 all_single_task = ["介绍", "故事", "信", "聊天", "时候", "关于", "了解"]
@@ -1127,8 +1127,8 @@ with gr.Blocks() as demo:
             ["这里推荐从左面选择：夜兰" ,"聊天", "夜来香"],
             ["这里推荐从左面选择：凝光" ,"时候", "品尝璃月香茗"],
             ["这里推荐从左面选择：可莉" ,"关于", "如何制造蹦蹦炸弹"],
-            ["这里推荐从左面选择：北斗" ,"了解", ""],
             ["这里推荐从左面选择：行秋" ,"故事", "一天行秋到望舒客栈吃饭。"],
+            ["这里推荐从左面选择：北斗" ,"了解", ""],
             ],
             inputs = [single_name ,select_task, Text],
             label = "单个角色任务指令例子"
