@@ -99,7 +99,7 @@ def repeat_to_one_fb(x):
 repeat_to_one = repeat_to_one_fb
 
 def process_info(x, maintain_chars = ",.。，;:：；?？\n——"):
-    req = re.findall(u"[\u4e00-\u9fa5{}]+".format(maintain_chars) ,x)
+    req = re.findall(u"[0-9\u4e00-\u9fa5{}]+".format(maintain_chars) ,x)
     return "".join(req)
 
 from huggingface_hub import snapshot_download
