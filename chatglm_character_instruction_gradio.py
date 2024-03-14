@@ -98,6 +98,33 @@ def repeat_to_one_fb(x):
 
 repeat_to_one = repeat_to_one_fb
 
+def process_row(x, names):
+    assert type(names) == type([])
+    x = x.strip()
+    if not x:
+        return x
+    first_char = x[0]
+    if first_char in map(lambda y: y[0], names):
+        return x
+    if first_char in ["：", ":"]:
+        return x[1:]
+    if first_char in "".join(names):
+        req = {}
+        for name in names:
+            merged = name
+            find_it = False
+            for ele in jieba.lcut(x):
+                if merged.endswith(ele) and not find_it:
+                    continue
+                else:
+                    find_it = True
+                merged += ele
+            if find_it:
+                req[name] = merged
+        #print(req)
+        return sorted(req.items(), key = lambda t2: len(t2[1][len(t2[0]):]))[0][1]
+    return x
+
 def process_info(x, maintain_chars = ",.。，;:：；?？\n——"):
     req = re.findall(u"[0-9\u4e00-\u9fa5{}]+".format(maintain_chars) ,x)
     return "".join(req)
@@ -1002,6 +1029,14 @@ def run_two(
     single_name_2, select_gender_2, select_country_2, single_identity_2, single_disposition_2,
     single_introduction_2,
     gen_times, max_length, top_p, temperature):
+    if hasattr(single_name_1, "value"):
+        single_name_1_ = single_name_1.value
+    else:
+        single_name_1_ = single_name_1
+    if hasattr(single_name_2, "value"):
+        single_name_2_ = single_name_2.value
+    else:
+        single_name_2_ = single_name_2
     two_prompt = partial(get_two_prompt, two_task = "哪些信息")(
         single_name_1, select_gender_1, select_country_1, single_identity_1, single_disposition_1,
         single_introduction_1,
@@ -1017,6 +1052,7 @@ def run_two(
         ):
             pass
         #yield ele
+        ele = process_row(ele, [single_name_1_, single_name_2_])
         req.append(ele)
     #print(req)
     req = sorted(set(filter(lambda x: x.strip(), req)), key = lambda y: -1 * len(y))
