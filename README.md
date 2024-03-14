@@ -119,7 +119,9 @@ Gradio示例接口可以看作与LLM交互的提示编辑器。每个可编辑�
 ### 注意
 从上方结论中看出，ChatGLM-6B-base-lora-tuned更易于生成多行对话结论，chinese-llama-2-13b-lora-tuned则更易于生成单行高质量结果。 <br/>
 当您自己尝试时，如果输出不太好，您可以尝试修改Gradio UI中可编辑的任何部分，值得注意的是缩短角色介绍通常会有利但会损害输出的多样性。 <br/>
-我推荐您在GPU上运行demo（12GB GPU显存足够，所有示例已经在GTX 1080Ti和GTX 3060上测试过） <br/><br/>
+我推荐您在GPU上运行demo（12GB GPU显存足够，所有示例已经在GTX 1080Ti和GTX 3060上测试过） <br/>
+当在chinese-llama-2-13b-lora-tuned中选用本地下载的2bit模型时 10GB GPU显存足够。
+<br/>
 
 ## 模型
 | 类型 | 基础模型             | HuggingFace Lora checkpoint 链接              | HuggingFace合并ggml或gguf链接            |
@@ -128,7 +130,12 @@ Gradio示例接口可以看作与LLM交互的提示编辑器。每个可编辑�
 | chinese-llama-2-13b-lora-tuned | hfl/chinese-llama-2-13b | https://huggingface.co/svjack/genshin_impact_character_llamazh13b_lora | https://huggingface.co/svjack/genshin_impact_character_llamazh13b_ggml |
 
 ### 注意
-每个上方HuggingFace合并ggml或gguf仓库中都包含两个合并的4bit量化模型，它们是本项目所使用的模型，由我在7000条标注数据集上训练。 <br/>
+每个上方HuggingFace合并ggml或gguf仓库中都包含量化模型。
+
+* [svjack/genshin_impact_character_glm6b_base_ggml](https://huggingface.co/svjack/genshin_impact_character_glm6b_base_ggml)    包含两个4bit量化模型。
+*  [svjack/genshin_impact_character_llamazh13b_ggml](https://huggingface.co/svjack/genshin_impact_character_llamazh13b_ggml)    包含两个2bit量化模型和两个4bit量化模型。
+
+它们是本项目所使用的模型，由我在7000条标注数据集上训练。 <br/>
 如果您想尝试在其他lora checkpoint中的结果，您可以使用HuggingFace Lora checkpoint链接中的文件，并自行合并， <br/>您可以参考[chatglm.cpp](https://github.com/li-plus/chatglm.cpp)和[llama-cpp-python](https://github.com/abetlen/llama-cpp-python)了解如何合并它们。
 
 <br/>
