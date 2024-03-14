@@ -60,7 +60,7 @@ https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/a
 As video example, you can click below example candidates and select character from the image gallery in gradio demo.
 There are 7 different tasks include "介绍", "故事", "信", "聊天", "时候", "关于", "了解" this project can do for single character, and for two characters ChatGLM3-6B-base-lora-tuned 
 can provide one character's perspective on another character's perspective. (chinese-llama-2-13b-lora-tuned not 
-cover this part of the ability) <br/>
+cover this part of ability) <br/>
 
 The gradio interface is the prompt editor for llm, Each editable input box (have "可编辑" fonts, ex: 角色姓名 身份 性格特征 角色介绍 任务追加信息) are free to change or edit,
 each optional input box (have "可选择" fonts, ex: 性别 国籍 选择任务) are free to change or select. They describe the background of characters and the info of instruction tasks. <br/>
