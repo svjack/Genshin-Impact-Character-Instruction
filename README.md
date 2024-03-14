@@ -49,6 +49,12 @@ pip install -r basic_requirements.txt
 
 https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/966364b2-bc35-4784-9125-dfdc7d950d7b
 
+
+
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/35393b74-7b2c-44ef-9ec8-805f41297fed
+
+
+
 https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/a248b68e-caff-4f4e-8a5b-12e09579a9f3
 
 <br/>
