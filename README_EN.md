@@ -39,10 +39,10 @@ pip install -r basic_requirements.txt
 * <b>LLM_Part</b> are modules that you should choose one to install: [chatglm.cpp](https://github.com/li-plus/chatglm.cpp) [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) <br/> <br/>
 
 Below are different LLM Repo types with their install and running command
-|LLM Repo Name | LLM Model Name | Install Command in Linux | Run Gradio Demo Command (go to 127.0.0.1:7860) |
-|---------|--------|--------|--------|
-| chatglm.cpp | THUDM/chatglm3-6b-base | pip install -r basic_requirements.txt && pip install chatglm-cpp==0.3.1 | python chatglm_character_instruction_gradio.py |
-| llama-cpp-python | hfl/chinese-llama-2-13b | pip install -r basic_requirements.txt && pip install llama-cpp-python==0.2.55 | python llama2zh_character_instruction_gradio.py |
+| Tune Type | LLM Repo Name | LLM Model Name | Install Command in Linux | Run Gradio Demo Command (go to 127.0.0.1:7860) |
+|-------|---------|--------|--------|--------|
+| ChatGLM-6B-base-lora-tuned | chatglm.cpp | THUDM/chatglm3-6b-base | pip install -r basic_requirements.txt && pip install chatglm-cpp==0.3.1 | python chatglm_character_instruction_gradio.py |
+| chinese-llama-2-13b-lora-tuned | llama-cpp-python | hfl/chinese-llama-2-13b | pip install -r basic_requirements.txt && pip install llama-cpp-python==0.2.55 | python llama2zh_character_instruction_gradio.py |
 
 
 ### Running Results
