@@ -1023,6 +1023,17 @@ def run_two(
     req = "\n\n".join(map(lambda t2: "结果{}:\n{}".format(t2[0], t2[1]), enumerate(req)))
     req = process_text(req)
     req = process_info(req)
+    l = req.split("\n\n")
+    def process_head(y):
+        ll = y.split("\n")
+        if len(ll) >= 2:
+            if len(ll[1].strip()) == 1:
+                return "\n".join([ll[0]] + ll[2:])
+            else:
+                return y
+        else:
+            return y
+    req = "\n\n".join(map(process_head, l))
     return req
 
 all_single_task = ["介绍", "故事", "信", "聊天", "时候", "关于", "了解"]
