@@ -101,6 +101,10 @@ def repeat_to_one_fb(x):
 
 repeat_to_one = repeat_to_one_fb
 
+def process_info(x, maintain_chars = ",.。，;:：；?？\n——"):
+    req = re.findall(u"[0-9\u4e00-\u9fa5{}]+".format(maintain_chars) ,x)
+    return "".join(req)
+
 from huggingface_hub import snapshot_download
 
 if not os.path.exists("genshin-impact-character"):
@@ -746,7 +750,11 @@ def get_single_prompt(
         character_setting_rewrite_dict = character_setting_rewrite_dict,
         Text = Text,
         )
-    return "\n".join([b, a])
+    #a = a.replace("？", "?")
+    req = "\n".join([b, a])
+    req = process_info(req)
+    return req
+    #return "\n".join([b, a])
 
 def get_two_prompt(
     single_name_1, select_gender_1, select_country_1, single_identity_1, single_disposition_1,
@@ -828,7 +836,11 @@ def get_two_prompt(
         character_setting_rewrite_dict_1 = character_setting_rewrite_dict_1,
         character_setting_rewrite_dict_2 = character_setting_rewrite_dict_2,
         )
-    return "\n".join([b, a])
+    #a = a.replace("？", "?")
+    req = "\n".join([b, a])
+    req = process_info(req)
+    return req
+    #return "\n".join([b, a])
 
 import re
 import pandas as pd
@@ -996,6 +1008,7 @@ def run_single(
 
     req = "\n\n".join(map(lambda t2: "结果{}:\n{}".format(t2[0], t2[1]), enumerate(req)))
     req = process_text(req)
+    req = process_info(req)
     return req
 
 def run_two(
@@ -1030,6 +1043,7 @@ def run_two(
     req = req_
     req = "\n\n".join(map(lambda t2: "结果{}:\n{}".format(t2[0], t2[1]), enumerate(req)))
     req = process_text(req)
+    req = process_info(req)
     return req
 
 all_single_task = ["介绍", "故事", "信", "聊天", "时候", "关于", "了解"]
