@@ -98,6 +98,10 @@ def repeat_to_one_fb(x):
 
 repeat_to_one = repeat_to_one_fb
 
+def process_info(x, maintain_chars = ",.。，;:：；?？\n——"):
+    req = re.findall(u"[\u4e00-\u9fa5{}]+".format(maintain_chars) ,x)
+    return "".join(req)
+
 from huggingface_hub import snapshot_download
 
 if not os.path.exists("genshin-impact-character"):
@@ -735,7 +739,10 @@ def get_single_prompt(
         )
     #a = a.replace("?", "").replace("？", "")
     a = a.replace("？", "?")
-    return "\n".join([b, a])
+    req = "\n".join([b, a])
+    req = process_info(req)
+    return req
+    #return "\n".join([b, a])
 
 def get_two_prompt(
     single_name_1, select_gender_1, select_country_1, single_identity_1, single_disposition_1,
