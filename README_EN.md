@@ -126,7 +126,9 @@ From above conclusion, ChatGLM-6B-base-lora-tuned makes it easier to generate mu
 
 When try yourself, when the outputs not too good, you can try to edit any changable part in the gradio ui, It's worth mentioning that shortening character introductions is generally useful, but it will hurt the variety of output. <br/>
 
-I recommand you run the demo on GPU (12GB gpu memory is enough, all examples have been tested on GTX 1080Ti and GTX 3060) <br/><br/>
+I recommand you run the demo on GPU (12GB gpu memory is enough, all examples have been tested on GTX 1080Ti and GTX 3060) <br/>
+If you choose 2bit models in chinese-llama-2-13b-lora-tuned, then 10GB gpu memory is enough.
+<br/>
 
 ## Models
 | Type | Base Model | HuggingFace Lora checkpoints link | Huggingface merged ggml or gguf link |
@@ -135,7 +137,11 @@ I recommand you run the demo on GPU (12GB gpu memory is enough, all examples hav
 | chinese-llama-2-13b-lora-tuned | hfl/chinese-llama-2-13b | https://huggingface.co/svjack/genshin_impact_character_llamazh13b_lora | https://huggingface.co/svjack/genshin_impact_character_llamazh13b_ggml |
 
 ### Note
-Each Huggingface merged ggml or gguf repos above contains two merged 4bit quantization models, they are the models used in this project and trained myself.<br/>
+Each Huggingface merged ggml or gguf repos above contains quantization models.
+* [svjack/genshin_impact_character_glm6b_base_ggml](https://huggingface.co/svjack/genshin_impact_character_glm6b_base_ggml) contain two 4bit quantization models.
+*  [svjack/genshin_impact_character_llamazh13b_ggml](https://huggingface.co/svjack/genshin_impact_character_llamazh13b_ggml) contain two 2bit quantization models and two 4bit quantization models.
+   They are the models used in this project and trained myself.<br/>
+   
 If you want to try conclusion in other checkpoint steps, you can use file in HuggingFace Lora checkpoints links and merge it by yourself, 
 You can take a look at [chatglm.cpp](https://github.com/li-plus/chatglm.cpp) and [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) to understand how to merge them.
 
