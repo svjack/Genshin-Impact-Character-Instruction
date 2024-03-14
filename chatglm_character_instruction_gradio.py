@@ -1052,11 +1052,11 @@ def run_two(
         ):
             pass
         #yield ele
-        ele = process_row(ele, [single_name_1_, single_name_2_])
+        ele = process_row(ele, [single_name_1_, single_name_2_]).strip()
         req.append(ele)
     #print(req)
     req = sorted(set(filter(lambda x: x.strip(), req)), key = lambda y: -1 * len(y))
-    req = "\n\n".join(map(lambda t2: "结果{}:\n{}".format(t2[0], t2[1]), enumerate(req)))
+    req = "\n\n".join(map(lambda t2: "结果{}:\n{}".format(t2[0], t2[1].strip()), enumerate(req)))
     req = process_text(req)
     req = process_info(req)
     l = req.split("\n\n")
@@ -1064,11 +1064,11 @@ def run_two(
         ll = y.split("\n")
         if len(ll) >= 2:
             if len(ll[1].strip()) == 1:
-                return "\n".join([ll[0]] + ll[2:])
+                return "\n".join([ll[0]] + ll[2:]).strip()
             else:
-                return y
+                return y.strip()
         else:
-            return y
+            return y.strip()
     req = "\n\n".join(map(process_head, l))
     return req
 
