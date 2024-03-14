@@ -119,8 +119,8 @@ Gradio示例接口可以看作与LLM交互的提示编辑器。每个可编辑�
 ### 注意
 从上方结论中看出，ChatGLM-6B-base-lora-tuned更易于生成多行对话结论，chinese-llama-2-13b-lora-tuned则更易于生成单行高质量结果。 <br/>
 当您自己尝试时，如果输出不太好，您可以尝试修改Gradio UI中可编辑的任何部分，值得注意的是缩短角色介绍通常会有利但会损害输出的多样性。 <br/>
-我推荐您在GPU上运行demo（12GB GPU显存足够，所有示例已经在GTX 1080Ti和GTX 3060上测试过） <br/>
-当在chinese-llama-2-13b-lora-tuned中选用本地下载的2bit模型时 10GB GPU显存足够。
+* 推荐您在GPU上运行demo（12GB GPU显存足够，所有示例已经在GTX 1080Ti和GTX 3060上测试过） <br/>
+* 当在chinese-llama-2-13b-lora-tuned中选用本地下载的2bit模型时 10GB GPU显存足够。(改变 [llama2zh_character_instruction_gradio.py](llama2zh_character_instruction_gradio.py) 中的变量 model_file_path 来设定使用的模型文件)
 <br/>
 
 ## 模型
