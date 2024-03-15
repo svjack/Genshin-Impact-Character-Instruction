@@ -887,8 +887,7 @@ def stop_criteria(sent, min_sub_len = 4):
         return "stop"
     return "continue"
 
-#model_file_path = "chatglm.cpp/chatglm3-base-inst-6500-sm-ggml.bin"
-#model_file_path = "chatglm3-base-inst-6500-sm-ggml.bin"
+#model_file_path = "genshin_impact_character_glm6b_base_ggml/chatglm3-base-inst-7500-sm-ggml.bin"
 model_file_path = "genshin_impact_character_glm6b_base_ggml/chatglm3-base-inst-6500-sm-ggml.bin"
 print("load {}".format(model_file_path))
 chatglm_llm = chatglm_cpp.Pipeline(Path(model_file_path))
