@@ -868,10 +868,9 @@ def stop_criteria(sent, min_sub_len = 4):
         return "stop"
     return "continue"
 
-#model_file_path = "llama2zh-13b-3900-q4_0.gguf"
-#model_file_path = "llama2zh-1_3b-4500-q4_0.gguf"
-#model_file_path = "llama2zh-13b-9300-q4_0.gguf"
-#model_file_path = "llama2zh-13b-7500-q4_0.gguf"
+#model_file_path = "genshin_impact_character_llamazh13b_ggml/llama2zh-13b-3900-q2_k.gguf"
+#model_file_path = "genshin_impact_character_llamazh13b_ggml/llama2zh-13b-7500-q2_k.gguf"
+#model_file_path = "genshin_impact_character_llamazh13b_ggml/llama2zh-13b-7500-q4_0.gguf"
 model_file_path = "genshin_impact_character_llamazh13b_ggml/llama2zh-13b-3900-q4_0.gguf"
 
 from llama_cpp import Llama
