@@ -128,7 +128,16 @@ Following are results of some tasks in different models. (take the favor one fro
 
 
 
-https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/97fda76b-5674-4e16-9dca-4850002228d4
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/523906b9-8136-47bc-a09d-6752d4d89a25
+
+
+
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/73c8497a-fe13-4159-9e16-52072a7a8529
+
+
+
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/35b3ad1c-e342-4a68-bdb1-c3aa615f3f77
+
 
 
 
