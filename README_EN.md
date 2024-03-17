@@ -124,6 +124,13 @@ Following are results of some tasks in different models. (take the favor one fro
 | 10 | 芙宁娜 那维莱特  角色间看法                                                    | 「那维莱特先生，是一位非常出色的审判官。他有着丰富的经验，睿智的头脑，还有公正的眼光。他是我见过最出色的审判官。」                                                   | ''                                                                                                                                                                           |
 | 11 | 提纳里 大慈树王  角色间看法                                                | 「大慈树王」？我听雨林里的居民说过她，他们都说，她很关心我们，很慈爱我们。但是，她已经很久没有露面了。雨林里现在还是有些不安定，我希望她能早日回来，让雨林恢复安宁。 | ''                                                                                                                                                                           |
 
+<br/>
+
+
+
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/97fda76b-5674-4e16-9dca-4850002228d4
+
+
 
 ### Note
 From above conclusion, ChatGLM-6B-base-lora-tuned makes it easier to generate multi-line and dialogue conclusions, chinese-llama-2-13b-lora-tuned Easily generates single-line high-quality results. <br/>
