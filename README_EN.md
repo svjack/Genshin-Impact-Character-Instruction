@@ -127,6 +127,27 @@ Following are results of some tasks in different models. (take the favor one fro
 <br/>
 
 
+### Running Results For some characters not covered by training data
+
+I also add some characters not trained for test (i.e. only change prompt). <br/>
+They are:
+
+<br/>
+
+<div align="center">
+<img src="imgs/characters_shot_add.png" alt="Girl in a jacket" > 
+</div>
+
+<br/>
+
+Below are different LLM Repo types with their running command.
+
+| Tune Type | Run Gradio Demo Command (go to 127.0.0.1:7860) |
+|-------|---------|
+| ChatGLM-6B-base-lora-tuned | python chatglm_character_instruction_add_charas_gradio.py |
+| chinese-llama-2-13b-lora-tuned | python llama2zh_character_instruction_add_charas_gradio.py |
+
+
 
 https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/523906b9-8136-47bc-a09d-6752d4d89a25
 
