@@ -123,6 +123,44 @@ Gradio示例接口可以看作与LLM交互的提示编辑器。每个可编辑�
 | 10 | 芙宁娜 那维莱特  角色间看法                                                    | 「那维莱特先生，是一位非常出色的审判官。他有着丰富的经验，睿智的头脑，还有公正的眼光。他是我见过最出色的审判官。」                                                   | ''                                                                                                                                                                           |
 | 11 | 提纳里 大慈树王  角色间看法                                                | 「大慈树王」？我听雨林里的居民说过她，他们都说，她很关心我们，很慈爱我们。但是，她已经很久没有露面了。雨林里现在还是有些不安定，我希望她能早日回来，让雨林恢复安宁。 | ''                                                                                                                                                                           |
 
+<br/>
+
+### 没有被训练集包含的部分角色结果
+
+下面测试了一些没有被训练数据集包含的其他设定角色 (即仅仅更改提示词). <br/>
+他们在下面的图片中：
+
+<br/>
+
+<div align="center">
+<img src="imgs/characters_shot_add.png" alt="Girl in a jacket" > 
+</div>
+
+<br/>
+
+下面是尝试这些其他设定人物的的运行命令
+
+|  微调类型 | Gradio Demo运行命令 (访问127.0.0.1:7860) |
+|-------|---------|
+| ChatGLM-6B-base-lora-tuned | python chatglm_character_instruction_add_charas_gradio.py |
+| chinese-llama-2-13b-lora-tuned | python llama2zh_character_instruction_add_charas_gradio.py |
+
+
+
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/523906b9-8136-47bc-a09d-6752d4d89a25
+
+
+
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/73c8497a-fe13-4159-9e16-52072a7a8529
+
+
+
+https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/35b3ad1c-e342-4a68-bdb1-c3aa615f3f77
+
+
+
+
+
 ### 注意
 从上方结论中看出，ChatGLM-6B-base-lora-tuned更易于生成多行对话结论，chinese-llama-2-13b-lora-tuned则更易于生成单行高质量结果。 <br/>
 当您自己尝试时，如果输出不太好，您可以尝试修改Gradio UI中可编辑的任何部分，值得注意的是缩短角色介绍通常会有利但会损害输出的多样性。 <br/>
