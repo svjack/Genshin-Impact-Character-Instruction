@@ -29,6 +29,16 @@ In the Game, one can play many Characters to explore the amazing open-world envi
 
 This project is an attempt to give Instruction Model demo for characters above.
 
+### Project Features
+* 1. Models are fine-tuned based on ChatGLM3-6B-base and Chinese-llama2-13B For 75 characters in Genshin Impact.
+* 2. Models includes story or dialogue generation for characters in 7 scenarios: "Introduction", "Story", "Letter", "Chat", "Do something", "About" and "Know someone". (“介绍”、“故事”、“信”、“聊天”、“时间”、“关于”和“了解”)
+* 3. Models supports dialogue, evaluation and opinions between two characters.
+* 4. Models supports more flexible and convenient prompt word editing. According to the rewriting and modification of the prompt words, models can be applied to a variety of scene reactions that are included in the game and not included in the game.
+* 5. Models supports newly created roles that are not included in the training data set, and gives some prompts and results for creating 42 new roles.
+* 6. Code contains some natural language processing modules to handle generation errors.
+* 7. In terms of operational convenience, the project provides a webui that facilitates changing and correcting prompt words, and automatically loads the prompt word information required by the character by clicking on the character's avatar, making it convenient for users to edit information.
+* 8. The project is based on the CPP file format after merging and quantification acceleration, ensuring that the example can run relatively efficiently and stably in a computing environment with 12GB of video memory.
+
 ## Installation and Running Results
 ### Install and Running Step
 In the concept, the project can be divided into two parts, Basic_Part and LLM_Part. <br/>
