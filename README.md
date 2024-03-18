@@ -181,7 +181,7 @@ https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/3
 * [svjack/genshin_impact_character_glm6b_base_ggml](https://huggingface.co/svjack/genshin_impact_character_glm6b_base_ggml)    包含两个4bit量化模型。
 *  [svjack/genshin_impact_character_llamazh13b_ggml](https://huggingface.co/svjack/genshin_impact_character_llamazh13b_ggml)    包含两个2bit量化模型和两个4bit量化模型。
 
-它们是本项目所使用的模型，由我在7000条标注数据集上训练。 <br/>
+它们是本项目所使用的模型，由我在自己标注的7000条数据集上训练。 <br/>
 如果您想尝试在其他lora checkpoint中的结果，您可以使用HuggingFace Lora checkpoint链接中的文件，并自行合并， <br/>您可以参考[chatglm.cpp](https://github.com/li-plus/chatglm.cpp)和[llama-cpp-python](https://github.com/abetlen/llama-cpp-python)了解如何合并它们。
 
 <br/>
