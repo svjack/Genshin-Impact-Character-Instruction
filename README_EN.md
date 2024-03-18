@@ -130,7 +130,7 @@ Following are results of some tasks in different models. (take the favor one fro
 
 ### Running Results For some characters not covered by training data
 
-I also add some characters not trained for test (i.e. only change prompt). <br/>
+I also add 42 characters not trained for test (i.e. only change prompt). <br/>
 They are:
 
 <br/>
