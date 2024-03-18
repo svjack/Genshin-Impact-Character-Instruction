@@ -37,7 +37,7 @@ This project is an attempt to give Instruction Model demo for characters above.
 * 5. Models supports newly created roles that are not included in the training data set, and gives some prompts and results for creating 42 new roles.
 * 6. Code contains some natural language processing modules to handle generation errors.
 * 7. In terms of operational convenience, the project provides a webui that facilitates changing and correcting prompt words, and automatically loads the prompt word information required by the character by clicking on the character's avatar, making it convenient for users to edit information.
-* 8. The project is based on the CPP file format after merging and quantification acceleration, ensuring that the example can run relatively efficiently and stably in a computing environment with 12GB of video memory.
+* 8. The project is based on the CPP file format after merging and quantification acceleration, ensuring that the example can run relatively efficiently and stably in a computing environment with 12GB of gpu memory.
 
 ## Installation and Running Results
 ### Install and Running Step
