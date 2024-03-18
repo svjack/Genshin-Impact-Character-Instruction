@@ -57,7 +57,8 @@ https://github.com/svjack/Genshin-Impact-Character-Instruction/assets/27874014/a
 
 <br/>
 
-As video example, you can click below example candidates and select character from the image gallery in gradio demo.
+As video example, you can click below example candidates and select character from the image gallery in gradio demo.<br/>
+When select a character from image gallery, the web ui will auto render the text background info of the character (you also can change the info mannaly) <br/>
 There are 7 different tasks include "介绍", "故事", "信", "聊天", "时候", "关于", "了解" this project can do for single character, and for two characters ChatGLM3-6B-base-lora-tuned 
 can provide one character's perspective on another character's perspective. (chinese-llama-2-13b-lora-tuned not 
 cover this part of ability) <br/>
