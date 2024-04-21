@@ -253,6 +253,13 @@ print()
 「巡林」…听起来像是很神圣又很有威信的职业吧！不过我本人却只是一名见习巡林员而已，真想多向前辈请教一些东西呢。
 ```
 
+### 利用 ollama 运行 [svjack/genshin_impact_character_llamazh13b_ggml](https://huggingface.co/svjack/genshin_impact_character_llamazh13b_ggml) 的例子
+
+请参见 
+[svjack/genshin_instruct_llama2zh_13b_3900](https://ollama.com/svjack/genshin_instruct_llama2zh_13b_3900) </br>
+请参见 
+[svjack/genshin_instruct_llama2zh_13b_7500](https://ollama.com/svjack/genshin_instruct_llama2zh_13b_7500)
+
 <br/>
 
 ## 进一步阅读
