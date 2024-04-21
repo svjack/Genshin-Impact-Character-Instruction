@@ -207,7 +207,7 @@ pip install sentencepiece
 pip install protobuf
 ```
 
-使用 llama-cpp 来生成 
+Use llama-cpp to generate
 ```python
 import llama_cpp
 import llama_cpp.llama_tokenizer
