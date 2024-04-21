@@ -197,6 +197,65 @@ Each Huggingface merged ggml or gguf repos above contains quantization models.
 If you want to try conclusion in other checkpoint steps, you can use file in HuggingFace Lora checkpoints links and merge it by yourself, 
 You can take a look at [chatglm.cpp](https://github.com/li-plus/chatglm.cpp) and [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) to understand how to merge them.
 
+### Use llama-cpp-python to run [svjack/genshin_impact_character_llamazh13b_ggml](https://huggingface.co/svjack/genshin_impact_character_llamazh13b_ggml) 
+
+Install the library
+```bash
+pip install llama-cpp-python
+pip install transformers
+pip install sentencepiece
+pip install protobuf
+```
+
+使用 llama-cpp 来生成 
+```python
+import llama_cpp
+import llama_cpp.llama_tokenizer
+
+llama = llama_cpp.Llama.from_pretrained(
+    repo_id="svjack/genshin_impact_character_llamazh13b_ggml",
+    filename="llama2zh-13b-3900-q4_0.gguf",
+    tokenizer=llama_cpp.llama_tokenizer.LlamaHFTokenizer.from_pretrained("hfl/chinese-llama-2-13b"),
+    verbose=False,
+    n_gpu_layers = -1
+)
+
+response = llama.create_chat_completion(
+    messages=[
+        {
+            "role": "user",
+            "content": '''
+            下面是柯莱的一些基本信息
+            性别:少女女性
+            国籍:须弥
+            身份:化城郭见习巡林员
+            性格特征:善解人意，乐于助人
+            这些是一段角色介绍
+            「乐于助人」、「阳光善良」、「热情洋溢」⋯在化城郭内外稍加了解，就能听到人们对这位见习巡林员的称赞。
+            只要身体允许，无论学业如何繁忙，柯莱都不会怠慢巡林工作，更不吝于向各色行人伸出饱含热情的援手。
+            只是如此热诚积极的柯莱，似乎也有着不愿为人所知的过往与心事。
+            假如在她经常巡逻的林间，发现贴满奇怪字条的树洞，或是类似碎碎念的声响。
+            无论看到听到了什么，还请善解人意地绕道而行，权当作兰那罗开的小小玩笑。
+            毕竟有些琐事，是只能说与树洞听的一一至少目前还是。
+            柯莱如何评价巡林员的工作？
+            '''
+        }
+    ],
+    stream=True
+)
+for chunk in response:
+    delta = chunk["choices"][0]["delta"]
+    if "content" not in delta:
+        continue
+    print(delta["content"], end="", flush=True)
+print()
+```
+
+output
+```txt
+「巡林」…听起来像是很神圣又很有威信的职业吧！不过我本人却只是一名见习巡林员而已，真想多向前辈请教一些东西呢。
+```
+
 <br/>
 
 ## Futher Reading
