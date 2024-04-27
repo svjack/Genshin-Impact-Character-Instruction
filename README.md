@@ -294,5 +294,6 @@ Project Link:[https://github.com/svjack/Genshin-Impact-Character-Instruction](ht
 * [chatglm.cpp](https://github.com/li-plus/chatglm.cpp)
 * [llama-cpp-python](https://github.com/abetlen/llama-cpp-python)
 * [svjack/Genshin-Impact-BookQA-LLM](https://github.com/svjack/Genshin-Impact-BookQA-LLM)
+* [svjack/Genshin-Impact-RAG](https://github.com/svjack/Genshin-Impact-RAG)
 * [svjack](https://huggingface.co/svjack)
 
