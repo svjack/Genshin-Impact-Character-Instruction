@@ -267,9 +267,12 @@ Please Visit
 <br/>
 
 ## Futher Reading
-I also release a project about A Genshin Impact Book Question Answer Project supported by LLM (build by LangChain Haystack ChatGLM Mistral OLlama), an attempt to build Chinese Q&A on the different LLM support RAG system. <br/>
+* 1 I also release a project about A Genshin Impact Book Question Answer Project supported by LLM (build by LangChain Haystack ChatGLM Mistral OLlama), an attempt to build Chinese Q&A on the different LLM support RAG system. <br/>
 If you are interested in it, take a look at [svjack/Genshin-Impact-BookQA-LLM](https://github.com/svjack/Genshin-Impact-BookQA-LLM) 😊
-
+* 2 The RAG version of this project use [Qwen1.5-14B-Chat](https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF) have been released in
+  [svjack/Genshin-Impact-RAG](https://github.com/svjack/Genshin-Impact-RAG), it's the knowledge maintain version of this project, 
+  You can retrieve knowledge of characters there, and the question can answered by characters in role play manner. 😊
+  
 <!-- CONTACT -->
 ## Contact
 
