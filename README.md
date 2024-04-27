@@ -263,9 +263,11 @@ print()
 <br/>
 
 ## 进一步阅读
-我还发布了一项关于基于量化大模型的原神书目问答工程 (由 LangChain Haystack ChatGLM Mistral OLlama 构造)。 <br/>
+* 1 我还发布了一项关于基于量化大模型的原神书目问答工程 (由 LangChain Haystack ChatGLM Mistral OLlama 构造)。 <br/>
 如果您对它感兴趣，请查看[svjack/Genshin-Impact-BookQA-LLM](https://github.com/svjack/Genshin-Impact-BookQA-LLM) 😊
-
+* 2 基于 [Qwen1.5-14B-Chat](https://huggingface.co/Qwen/Qwen1.5-14B-Chat-GGUF) 使用RAG系统构建的此工程版本已经发布在
+  [svjack/Genshin-Impact-RAG](https://github.com/svjack/Genshin-Impact-RAG)， 其是此工程的知识保留版本，有更少的模型幻想，
+  你可以通过那个工程查询有关角色和故事设定的相关知识，并且回答的结果可以通过角色扮演的方式进行符合角色设定的回答 😊
 
 <br/>
 
