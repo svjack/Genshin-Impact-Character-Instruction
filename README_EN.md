@@ -4,7 +4,7 @@
   <h3 align="center">Genshin-Impact-Character-Instruction</h3>
 
   <p align="center">
-   		Genshin Impact Character Instruction Models tuned by Lora on LLM (build by ChatGLM3-6B-base Chinese-Llama-2-13B)
+   		Genshin Impact Character Instruction Models tuned by Lora on LLM (build by ChatGLM3-6B-base Chinese-Llama-2-13B Qwen1.5-7B-Chat)
     <br />
   </p>
 </p>
@@ -38,6 +38,7 @@ This project is an attempt to give Instruction Model demo for characters above.
 * 6. Code contains some natural language processing modules to handle generation errors.
 * 7. In terms of operational convenience, the project provides a webui that facilitates changing and correcting prompt words, and automatically loads the prompt word information required by the character by clicking on the character's avatar, making it convenient for users to edit information.
 * 8. The project is based on the CPP file format after merging and quantification acceleration, ensuring that the example can run relatively efficiently and stably in a computing environment with 12GB of gpu memory.
+* 9. While providing the sft fine-tuning model for the above two models, a fine-tuning version of ORPO based on Qwen1.5-7B-Chat is also given to achieve better results in the same volume.
 
 ## Installation and Running Results
 ### Install and Running Step
